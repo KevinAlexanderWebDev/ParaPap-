@@ -9,14 +9,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const pantallaInicio = document.getElementById('inicioMusical');
   const btnInicio = document.getElementById('iniciarMusica');
   const btnMusica = document.getElementById('toggleMusic');
+  const btnMusicaAlterna = document.getElementById('toggleMusicAlt');
+  let alternaSonando = false;
 
-  const cancionAuto = new Audio('HIMNO DEL AMERICA.mp3');
+  const cancionAuto = new Audio('Hoy Tengo Que Decirte Papá.mp3');
   cancionAuto.loop = true;
   cancionAuto.volume = 0.3;
 
-  const musica = new Audio('Hoy Tengo Que Decirte Papá.mp3');
+  const musica = new Audio('Quiero Parecerme a Mi Papá.mp3');
   musica.loop = true;
   musica.volume = 0.4;
+
+  const musicaAlterna = new Audio('HIMNO DEL AMERICA.mp3'); 
+  musicaAlterna.loop = true;
+  musicaAlterna.volume = 0.4;
 
   let fondoSonando = false;
 
@@ -31,6 +37,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   actualizarTextoBoton(false);
+  btnMusicaAlterna.addEventListener('click', () => {
+   if (alternaSonando) {
+      musicaAlterna.pause();
+      btnMusicaAlterna.setAttribute('aria-pressed', 'false');
+      btnMusicaAlterna.innerHTML = '<span class="icon">▶️</span> <span class="text">Reproducir Tu Himno 🦅</span>';
+    } else {
+      // Pausar las otras músicas si están sonando
+      if (!musica.paused) {
+        musica.pause();
+        fondoSonando = false;
+        actualizarTextoBoton(false);
+      }
+      if (!cancionAuto.paused) {
+        cancionAuto.pause();
+        cancionAuto.currentTime = 0;
+      }
+
+      musicaAlterna.play();
+      btnMusicaAlterna.setAttribute('aria-pressed', 'true');
+      btnMusicaAlterna.innerHTML = '<span class="icon">⏸️</span> <span class="text">Pausar Otra Canción</span>';
+    }
+
+    alternaSonando = !alternaSonando;
+  });
 
   // Cuando se inicia la experiencia musical
   btnInicio.addEventListener('click', () => {
@@ -48,12 +78,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (fondoSonando) {
       musica.pause();
       actualizarTextoBoton(false);
+      musica1.pause();
+      actualizarTextoBoton(false);
     } else {
       if (!cancionAuto.paused) {
         cancionAuto.pause();
         cancionAuto.currentTime = 0;
       }
       musica.play();
+      actualizarTextoBoton(true);
+      musica1.play();
       actualizarTextoBoton(true);
     }
     fondoSonando = !fondoSonando;

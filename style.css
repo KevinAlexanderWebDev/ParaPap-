@@ -440,6 +440,7 @@ audio::-webkit-media-controls-panel {
   gap: 0.6rem;
   transition: background 0.3s ease, transform 0.2s ease;
   user-select: none;
+  margin-bottom: 1rem;
 }
 
 #toggleMusic:hover, 
@@ -454,6 +455,40 @@ audio::-webkit-media-controls-panel {
 }
 
 #toggleMusic .icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+#toggleMusicAlt {
+  background: linear-gradient(135deg, #FFCD00, #FFC700);
+  border: none;
+  border-radius: 30px;
+  padding: 0.8rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #002D72;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 205, 0, 0.6);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+#toggleMusicAlt:hover, 
+#toggleMusicAlt:focus {
+  background: linear-gradient(135deg, #FFDD44, #FFD933);
+  outline: none;
+  transform: scale(1.05);
+}
+
+#toggleMusicAlt:active {
+  transform: scale(0.95);
+}
+
+#toggleMusicAlt .icon {
   font-size: 1.5rem;
   transition: transform 0.3s ease;
 }

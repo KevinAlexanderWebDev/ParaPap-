@@ -1,0 +1,133 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Ti, Papá 💛💙</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Pantalla de inicio con imagen -->
+  <div id="inicioMusical">
+    <img src="club-america-vector-logo-seeklogo/club-america-seeklogo.png" id="iniciarMusica" alt="Haz clic para comenzar la experiencia musical" />
+  </div>
+
+  <!-- Contenido principal animado -->
+  <main>
+
+    <header class="hero">
+      <div class="hero-content">
+        <img src="club-america-vector-logo-seeklogo/club-america-seeklogo.png" alt="Foto de papá" class="foto-papa" />
+        <div class="texto-header">
+          <h1>Feliz Día del Padre</h1>
+          <p>Al más grande, al más apasionado aficionado, al verdadero amigo, AMC</p>
+        </div>
+      </div>
+    </header>
+
+
+    <section class="carta" aria-labelledby="titulo-carta">
+      <h2 id="titulo-carta">Una peuqeña carta para ti, Papá</h2>
+      <div class="contenido-carta">
+        <p>
+          Papá, ni siquiera se por donde comenzar, estos 22 años y contando me han enseñado solo una cosa, la familia es lo más importante que existe. Eres el pilar de ella, gracias 
+          a ti aprendí las bases para ser un gran hombre, a saber valerme, a amar al prógimo y ser recíproco. No puedo decir que ya estoy listo para lo que viene, pero si puedo decirte que 
+          me preparaste lo mejor que pudiste y eso jamás lo olvidaré. Ten por seguro que a donde sea que vaya yo me llevaré tus enseñanzas, tus consejos y sobre todo lo mejor que me dejaste: 
+          El cerebro, el culturismo y el respeto a la vida.<br>
+          No tengo queja alguna sobre ti y cómo eres de padre, que sin duda alguna dejas a todos opacados; estoy más que orgulloso de que seas mi papá y la mejor manera de demostrartelo será el 
+          día que culmine mi carrera. Gracias por todo Apa, a conquistar el mundo.🏋️🌎
+        </p>
+      </div>
+    </section>
+
+    <section class="galeria" aria-labelledby="titulo-galeria">
+      <h2 id="titulo-galeria">Nuestros Recuerdos</h2>
+      <div class="galeria-grid">
+        <div class="polaroid">
+          <a href="foto1.jpg" class="lightbox">
+            <img src="foto1.jpg" alt="Papá y yo en la playa" />
+          </a>
+          <span class="firma">Playa juntos 🏖️</span>
+        </div>
+        <div class="polaroid">
+          <a href="foto2.jpg" class="lightbox">
+            <img src="foto2.jpg" alt="Papá y yo celebrando" />
+          </a>
+          <span class="firma">Celebración inolvidable 🎉</span>
+        </div>
+        <div class="polaroid">
+          <a href="foto3.jpg" class="lightbox">
+            <img src="foto3.jpg" alt="Papá abrazándome de pequeño" />
+          </a>
+          <span class="firma">El abrazo de mi vida 🤗</span>
+        </div>
+      </div>
+      <div class="descargar-fotos">
+        <button id="descargarImagenes">📥 Descargar Recuerdos</button>
+      </div>
+    </section>
+
+    <section class="frases" aria-labelledby="titulo-frases">
+      <h2 id="titulo-frases">Lo Que Siempre Admiré de Ti</h2>
+      <div class="cards">
+        <div class="card" data-anecdota="Recuerdo cuando llegaste cansado del trabajo, pero aun así jugaste conmigo como si fueras el cansancio fuera pasajero.">🤝 Siempre estuviste cuando más te necesitaba</div>
+        <div class="card" data-anecdota="Tus palabras cuando fracasé por varios años como hijo, estudiante y como todo me dieron la fuerza para seguir adelante.">💪 Me enseñaste a ser fuerte y noble</div>
+        <div class="card" data-anecdota="Cada mañana, tus mensajes son la paz que necesita mi mente para estar feliz de que algo estoy haciendo bien.">🔋 Tu amor es mi motor diario</div>
+        <div class="card" data-anecdota="Recuerdo cuando me abrazaste el día que no logré mi meta. Sentí que todo estaba bien.">🗣️ Tu voz siempre me dio seguridad</div>
+        <div class="card" data-anecdota="Siempre admiré tu forma de tratar a los demás con respeto, amor y con equidad incluso en los momentos difíciles.">👨‍👦‍👦 Eres mi ejemplo de cómo ser un gran hombre</div>
+        <div class="card" data-anecdota="Aun cuando me equivoqué, cuando llegué al suelo y pensaba no renacer, tu mirada me decía: 'tú puedes con esto'.">🎯 Me enseñaste a no rendirme nunca</div>
+      </div>
+    </section>
+
+  <!-- Modal para mostrar anécdotas -->
+    <div class="modal" id="modalAnecdota" role="dialog" aria-modal="true" aria-labelledby="modalTexto">
+      <div class="modal-content">
+        <span class="cerrar" id="cerrarModal">&times;</span>
+        <p id="modalTexto"></p>
+      </div>
+    </div>
+
+    <section class="audio-section" aria-labelledby="titulo-audio">
+      <h2 id="titulo-audio">Un Mensaje de Voz para Ti</h2>
+      <p class="audio-desc">Grabé estas palabras con todo mi amor. Escúchalas cuando necesites una voz que te recuerde cuánto te valoro. 💙</p>
+
+      <div class="audio-player">
+        <img src="voz.png" alt="Ícono de mensaje de voz" />
+        <audio id="mensajeAudio" controls>
+          <source src="audio/mensaje-voz.mp3" type="audio/mpeg">
+          Tu navegador no soporta el elemento de audio.
+        </audio>
+      </div>
+    </section>
+
+    <section class="musica-section" aria-labelledby="titulo-musica">
+      <h2 id="titulo-musica">Música de Fondo</h2>
+      <p>Reproduce la siguiente canción que me acompañó cada día del padre de mi hermosa infancia</p>
+      <button id="toggleMusic" aria-pressed="false" aria-label="Reproducir música de fondo">
+        <span class="icon">▶️</span> <span class="text">Reproducir Música</span>
+      </button>
+    </section>
+
+    <footer>
+      <p>Con amor eterno, tu leal amigo tu hijo 💙</p>
+      <div class="footer-contact">
+        <a href="mailto:tuemail@example.com" aria-label="Enviar correo">
+          <img src="email.png" alt="Email" />
+        </a>
+        <a href="https://github.com/KevinAlexanderWebDev" target="_blank" rel="noopener" aria-label="GitHub">
+          <img src="github.png" alt="Twitter" />
+        </a>
+        <a href="https://www.linkedin.com/in/tu_usuario" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <img src="linkedin.png" alt="LinkedIn" />
+        </a>
+      </div>
+      <small>© 2025 Kevin Alex Meza Morales. Todos los derechos reservados.</small>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

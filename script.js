@@ -120,4 +120,21 @@ document.addEventListener('DOMContentLoaded', () => {
       modal.style.display = 'none';
     }
   });
+
+    // Pausar música de fondo y automática al reproducir el mensaje de voz
+  const mensajeAudio = document.getElementById('mensajeAudio');
+  if (mensajeAudio) {
+    mensajeAudio.addEventListener('play', () => {
+      if (!musica.paused) {
+        musica.pause();
+        fondoSonando = false;
+        actualizarTextoBoton(false);
+      }
+      if (!cancionAuto.paused) {
+        cancionAuto.pause();
+        cancionAuto.currentTime = 0;
+      }
+    });
+  }
+
 });
